@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>software for leap years</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend><h1>software for leap years</h1></legend>
+        <p> please input the year you want to check .</p>
+        <input type="text" id="year">
+        <input onclick="on()" type="button" value="click to check ">
+    </fieldset>
+</form>
+<script>
+    function on(){
+        let year=document.getElementById("year").value;
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    alert(year + " is a leap year");
+                } else {
+                    alert(year + " is NOT a leap year");
+                }
+            } else {
+                alert(year + " is a leap year");
+            }
+        } else {
+            alert(year + " is NOT a leap year");
+        }
+
+    }
+</script>
+</body>
+</html>
